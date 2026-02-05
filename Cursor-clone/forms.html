@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ChaiCode Registration</title>
+  </head>
+  <body>
+    <h1>ChaiCode Course Registration</h1>
+    <form action="/submit-form" method="post">
+    <fieldset>
+      <legend>Personal Information</legend>
+      <label>First Name :</label>
+      <input type="fname" id="fname" name="fname" maxlength="100" required><br><br>
+      <label>Last Name :</label>
+      <input type="lname" id="lname" name="lname" required><br><br>
+      <label>Email :</label>
+      <input type="email" id="mail" name="email" placeholder="eg: xyz@exmaple.com" required><br><br>
+      <label>Phone no :</label>
+      <input type="tel" id="phone"  name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="e.g., 123-45-678"><br><br>
+    
+      <label>Select your state :</label><br><br>
+      <input list="state"><br>
+      <datalist>
+        <option value="Maharashtra" />
+        <option value="Gujarat"/>
+        <option value="Rajasthan"/>
+        <option value="Banglore"/>  
+      </datalist>
+      </fieldset>
+      <br>
+      <fieldset>
+      Select the courses :<br>
+      <input type="checkbox" name="web-dev" value="yes">web-dev<br>
+      <input type="checkbox" name="system design" value="yes">system design<br>
+      <input type="checkbox" name="DSA in Java" value="yes">DSA in Java<br><br>
+
+      Do you agree this statement ?<br>
+      <input type="radio" name="agree" value="yes">yes<br>
+      <input type="radio" name="agree" value="no">No<br><br>
+
+      <label>Upload resume :</label>
+      <input type="file" id="file Upload" accept=".pdf, image" multiple/><br><br>
+      </fieldset>
+      <fieldset>
+        <legend>Payement method</legend>
+        <select>
+          <option value="UPI payment" />UPI payment
+          <option value="Google pay" />Google pay
+          <option value="onine banking" />onine banking
+          <option value="debit card" />debit card
+        </select><br><br>
+        <label>Which field do you belong?</label><br>
+        <textarea id="field" name="field" rows="4" cols="20"></textarea>  
+      </fieldset>
+    </form>
+  </body>
+</html>
